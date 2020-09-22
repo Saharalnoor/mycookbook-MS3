@@ -58,7 +58,7 @@ def insert_recipe():
 
     new_recipe = {
         'category_name': request.form.get('category_name'),
-        'coffe_name': request.form.get('coffe_name'),
+        'coffe_name': request.form.get('coffee_name'),
         'image_link': request.form.get('image_link'),
         'prep_time': request.form.get('prep_time'),
         'cook_time': request.form.get('cook_time'),
