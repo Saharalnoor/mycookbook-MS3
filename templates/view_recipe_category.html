@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+    
+    {% for recipe in recipes %}
+        {% if recipe.category_name == selected_category %}
+
+        <div class="card mb-4 mt-5">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 recipe-image">
+                        <img class="recipe-image responsive-img" src="{{recipe.image_link}}" alt="coffee-image">
+                    </div>
+                    <div class="col-md-9 recipe-description">
+                        <h3 class="coffee-title">{{recipe.coffee_name}}</h3>
+                        <a href="{{url_for('recipe_details', recipe_id=recipe._id)}}" class="btn btn-light">View Recipe</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endif %}
+    {% endfor %}
+
+</div>
+{% endblock %}

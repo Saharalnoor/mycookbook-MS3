@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!--Recipe name-->
+    <h1 class="coffee-name text-uppercase center-align ">
+        {{recipe.coffee_name}}
+    </h1>
+      <hr class="center-align">
+    <br>
+      <div class="row">
+        <div class="col-12 col-md-6 center-align">
+            <img class="recipe-image responsive-img z-depth-2" src="{{recipe.image_link}}" 
+            alt="Recipe Image" />
+        </div>
+            
+            <!---Recipe Details-->
+                 <div class="col s6">
+                        <blockquote><strong><p> <span class="recipe-detail-title">Prepation time:</span>  <span class="recipe-details"> {{ recipe.prep_time }}</span></p></strong></blockquote>
+                        <blockquote><strong><p> <span class="recipe-detail-title">Cooking time:</span>  <span class="recipe-details"> {{ recipe.cooking_time }}</span></p></strong></blockquote>
+                        <blockquote><strong><p> <span class="recipe-detail-title">Yield:</span>  <span class="recipe-details"> {{ recipe.yield }}</span></p></strong></blockquote>
+                </div>
+                
+          
+                
+ <!--Ingredients-->
+<div class="container container-recipe-details mt-5">
+    <div class="row">
+        <div class="col s12 m4">
+            <h3 class="details-heading text-uppercase center-align">Ingredients</h3>
+            <ul class="unordered-list list-items mb-5">
+                 {% for ingredient in recipe.ingredients %}
+                <li>
+                    <i class="fas fa-circle bullet-point-icon"></i>
+                    {{ ingredient }}
+                </li>
+                {% endfor %}
+                
+            </ul>
+        </div>
+        <!--Directions-->
+        <div class="col s12 m8">
+            <h3 class="details-heading text-uppercase center-align">Direction</h3>
+            <ol class="list-items">
+                {% for directions in recipe.direction %}
+                <li>
+                    {{ directions }}
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+</div>
+      </div>
+
+
+{% endblock %}

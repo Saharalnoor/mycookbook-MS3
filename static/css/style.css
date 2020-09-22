@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.hero-container{
+    height: 60vh;
+    background-image:  url(../img/hero-image.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    bottom: 0;
+    position: relative;
+}
+
+/* Overlay */
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Jumbotron */
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.jumbotron-header {
+    margin: 20vh 0 10vh 0;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #ffff;
+}
+
+
+/*Navigation */
+
+
+.navbar-expand-lg{
+    height: 90px;
+}
+
+.navbar-brand {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.navbar-brand img{
+    width: 200px;
+    height: 65px;
+}
+
+.navbar-nav .nav-item {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 4.2em;
+    letter-spacing: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #da4003;
+    font-size: 16.5px;
+}
+nav ul li:hover, nav ul li.active {
+    background-color: transparent;
+}
+
+.navbar ul li a:hover {
+    color: #da4003 !important;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+/*buttons*/
+
+.btn-light{
+    background-color: #da4003;
+}
+
+.btn-form{
+    margin-top: 0;
+    margin-bottom: 60px;
+    width: 90%;
+}
+
+.Add-recipe-heading{
+    color:#da4003;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+.coffee-title{
+    color:#3d2e18;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+}
+.coffee-name{
+    color:#da4003;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+}
+
+.recipe-image{
+    padding: 1rem;
+    border-radius: 25px;
+    align-items: center;
+}
+
+
+.recipe-detail-title {
+    display: inline-block;
+    color: #da4003;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.recipe-details {
+    color:black;
+    font-size: 1.2em;
+    font-family: sans-serif;
+}
+
+.details-heading{
+    font-weight: 500;
+    font-size: 2rem;
+    color: #da4003;
+}
+
+blockquote{
+    border-left: 5px solid #e95b22;
+}
+
+.bullet-point-icon{
+    font-size:5px;
+    margin-right:10px;
+}
+
+.list-items{
+    padding: 10px;
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+}
+
+.material-icons{
+    font-size: 35px;
+    color: #da4003;
+
+}
+
+
+.input-field {
+     font-family: "Open Sans", sans-serif;
+     color: #000 !important; /*!important is used to override the Materialize CSS*/
+   }
+   
+   .input-field label {
+     font-family: inherit;
+     color: inherit;
+   }
+
+label {
+     font-family: inherit;
+     font-size: inherit;
+     color: inherit;
+}
+
+/* footer */
+.footer-container {
+    background-color: #da4003;
+    color: #ffff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.footer-heading {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.footer-section-margin {
+    margin-bottom: 10px;
+}
+
+.social-links-item:hover {
+    color: #80391e;
+}
+
+.footer-heading-social {
+    text-align: center;
+}
+
+.social-links-item {
+    padding: 0 10px;
+    font-size: 35px;
+    text-align: center;
+    color: #ffffff;
+}
+

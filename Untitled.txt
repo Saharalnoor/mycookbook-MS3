@@ -1,0 +1,252 @@
+<div class="hide-on-small-only">
+        <hr class="center-align" />
+    </div>
+    <!--Recipe image-->
+    <div class="row">
+        <div class="col s12 m6">
+            <img class="recipe-image" src="{{recipe.image_link}}" 
+            alt="Recipe Image" />
+                 <!--preparation time-->
+                 <div class="col s6">
+                    <i class="far fa-clock recipe_icon"></i>
+                    <h6>Prepation time</h6>
+                    <p class="paragraph-recipe">
+                        {{ recipe.prep_time }} minutes
+                    </p>
+                </div>
+            </div>
+                <!--Cooking time-->
+                <div class="col s6">
+                    <i class="far fa-clock recipe_icon"></i>
+                    <h6>Cooking time</h6>
+                    <p class="paragraph-recipe">
+                        {{ recipe.cooking_time }} minutes
+                    </p>
+                </div>
+            </div>
+            <!--Yields-->
+            <div class="row center-align">
+                <div class="col s12">
+                    <i class="fas fa-user recipe_icon"></i>
+                    <h6>Yield</h6>
+                    <p class="paragraph-recipe">{{ recipe.yield }}</p>
+                </div>
+            </div>
+
+
+
+            <!--Ingredients-->
+<div class="container container-recipe-lists">
+    <div class="row">
+        <div class="col s12 m4">
+            <h3 class="tertiary-heading uppercase center-align">Ingredients</h3>
+            <ul class="unordered-list list-items">
+                {% for ingredient in recipe.ingredients %}
+                <li>
+                    <i class="fas fa-circle bullet-point-icon"></i>
+                    {{ ingredient }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <!--Directions-->
+        <div class="col s12 m8">
+            <h3 class="tertiary-heading uppercase center-align">Directions:</h3>
+            <ol class="list-items">
+                {% for direction in recipe.directions %}
+                <li class="margin-bottom-small">
+                    {{ direction }}
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-12 col-md-6">
+            <h6>Prepation time:</h6>
+              <p class="recipe-details">
+                    {{ recipe.prep_time }} minutes
+              </p> 
+            <h6>Cooking time:</h6>
+              <p class="recipe-details">
+                   {{ recipe.cooking_time }} minutes
+              </p> 
+        </div>
+      
+      </div>
+
+
+
+      <footer class="container-fluid footer-container footer-bg-color">
+        <div class="row">
+            <!-- Footer: Social media links -->
+            <div class="col text-center">
+                <h6 class="general-sub mt-5">Follow Us</h6>
+                <ul class="list-inline social-links text-center">
+                    <li class="list-inline-item">
+                        <a href="https://github.com/" target="_blank" rel="noopener" class="social-links-item">
+                            <i class="fab fa-github media-icons" aria-hidden="true"></i>
+                            <span class="sr-only">Pinterest</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="social-links-item">
+                            <i class="fab fa-linkedin-in media-icons" aria-hidden="true"></i>
+                            <span class="sr-only">Pinterest</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-links-item">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-links-item">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-center">
+                    Copyright © 2020 Coffe House. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+     <select id="categories" name="category_name">
+                <option value="" disabled selected>Click to Select</option>
+                <!--The following for loop pulls the list of category names from the categories collection in the database-->
+               {% for categories in category %}
+                            <option>{{categories.category_name}}</option>
+                            {% endfor %}
+                        </select>
+            <label>Category</label>
+
+
+
+
+.navbar-expand-lg{
+    height: 90px;
+
+}
+
+.navbar-brand {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.navbar-brand img{
+    width: 200px;
+    height: 65px;
+}
+
+.navbar-nav .nav-item {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 4.2em;
+    letter-spacing: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+.nav-item {
+    color: #80391e;
+}
+
+.active a {
+    color: #80391e !important;
+}
+
+.navbar ul li a:hover {
+    color: #da4003 !important;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='img/coffee-house-logo.png') }}" 
+            class="brand-logo" alt="Coofee House" > </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                </li>
+               <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('view_recipe_category', selected_category='Hot Coffee')}}">Hot Coffee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('view_recipe_category', selected_category = 'Iced Coffee')}}">Iced Coffee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('add_recipes')}}">Add a Recipe</a>
+                </li>
+                </ul>
+            </div>
+    </nav>
+
+
+            <nav>
+            <div class="nav-wrapper">
+                <a href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='img/coffee-house-logo.png') }}" class="brand-logo" alt="Coofee House" > </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"> <i class="material-icons navbar-icon" aria-hidden="true">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('view_recipe_category', selected_category='Hot Coffee')}}">Hot Coffee</a></li>
+                    <li><a href="{{url_for('view_recipe_category', selected_category='Iced Coffee')}}">Iced Coffee</a></li>
+                    <li><a href="{{url_for('add_recipes')}}">Add a Recipe</a></li>
+                </ul>
+            </div>
+        </nav>
+
+                <ul class="sidenav" id="mobile-demo">
+                    <li><a href="{{url_for('home')}}" class="uppercase">Home</a></li>
+                    <li><a href="{{url_for('view_recipe_category', selected_category='Hot Coffee')}}" class="uppercase">Hot Coffee</a></li>
+                    <li><a href="{{url_for('view_recipe_category', selected_category='Iced Coffee')}}" class="uppercase">Iced Coffee</a></li>
+                    <li><a href="{{url_for('add_recipes')}}" class="uppercase">Add a Recipe</a></li>
+                </ul>
+
+
+                @app.route('/insert_recipe', methods=['GET', 'POST'])
+def insert_recipe():
+
+    recipes = mongo.db.recipes
+    recipes.insert_one(request.form.to_dict())
+
+    new_recipe = {
+        'category_name': request.form.get('category_name'),
+        'coffe_name': request.form.get('coffe_name'),
+        'image_link': request.form.get('image_link'),
+        'prep_time': request.form.get('prep_time'),
+        'cook_time': request.form.get('cook_time'),
+        'ingredients': request.form.get('ingredients'),
+        'direction': request.form.get('direction'),
+        'yields': request.form.get('yields'),
+    }
+    return render_template(
+        'recipe_details.html', recipe=new_recipe)
+
+
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+
+    recipes = mongo.db.recipes
+    recipes.insert_one(request.form.to_dict())
+
+    return render_template(
+        'recipe_details.html')
